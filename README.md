@@ -6,13 +6,13 @@ There are times when you want to know exactly in which physical AZ your RDS inst
 When you want to identify RDS instances by AZ Id in a single account, you might want to use some of the following approaches:
 - locally run a script that calls the RDS API to describe your resources, such as the one provided under `/local python script`
 
-- apply a [Custom Config Rule](https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_develop-rules.html) which evaluates if your RDS instances run in an [Availiability Zone](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html) specified by its [ID](https://docs.aws.amazon.com/ram/latest/userguide/working-with-az-ids.html). 
+- apply a [Custom Config Rule](https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_develop-rules.html) which evaluates if your RDS instances run in an [Availability Zone](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html) specified by its [ID](https://docs.aws.amazon.com/ram/latest/userguide/working-with-az-ids.html). 
 
 
 ### Multiple Accounts
 AWS [maps](https://docs.aws.amazon.com/ram/latest/userguide/working-with-az-ids.html) the physical Availability Zones randomly to the Availability Zone names for each AWS account.
 You might want to know which RDS Instances run in a specified AZ across different accounts. In this case the CloudFormation template provided can be deployed across accounts using [CloudFormation StackSets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/what-is-cfnstacksets.html) with no modifications.
-The [Custom Config Rule](https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_develop-rules.html) will evaluate if your RDS instances run in the [Availiability Zone](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html) specified by its [ID](https://docs.aws.amazon.com/ram/latest/userguide/working-with-az-ids.html). 
+The [Custom Config Rule](https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_develop-rules.html) will evaluate if your RDS instances run in the [Availability Zone](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html) specified by its [ID](https://docs.aws.amazon.com/ram/latest/userguide/working-with-az-ids.html). 
 
 ---
 
